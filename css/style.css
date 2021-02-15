@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-width: 431px;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+.main_navbar {
+    float: left;
+    width: 250px;
+    height: calc(100% - 70px);
+    background-color: black;
+    padding: 0 20px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.main_content {
+    float: left;
+    width: calc(100% - 250px);
+    background-color: rgb(20,25,34);
+    height: calc(100% - 70px);
+    overflow-y: auto;
+}
+
+footer {
+    min-width: 431px;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(40,40,40);
+    position: absolute;
+    bottom: 0;
+}
+
+/* SCROLLBAR GENTLY OFFERED BY W3SCHOOLS */
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.general_ul {
+    list-style-type: none;
+}
+
+.navigation li img {
+      display: block;
+  }
+
+.general_anchor {
+    text-decoration: none;
+}
+
+.white {
+    color: white;
+}
+
+.margin_top_li {
+    margin-top: 10px;
+}
+
+.grey {
+    color: rgb(124,126,131);
+}
+
+.navigation .general_anchor:hover, .playlist .general_anchor:hover, .playlist_btn .general_anchor:hover, .getapp_account .general_anchor:hover{
+    color: lightgray;
+}
+
+.logo_handler {
+    height: 40px;
+    background-image: url('../img/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#logo {
+    padding: 20px 0;
+}
+
+.nav_icons {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.flex_align_icons {
+    display: flex;
+    align-items: center;
+}
+
+.larger_margin_top {
+    margin-top: 20px;
+}
+
+.plus_box {
+    color: black;
+    background-color: rgb(124,126,131);
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.hover_lightgrey:hover > .plus_box {
+    background-color: lightgray;
+}
+
+.playlist {
+    min-height: 84px;
+    overflow-y: auto;
+}
+
+.getapp_account {
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+#download {
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid rgb(124,126,131);
+}
+
+.stronger {
+    font-weight: 500;
+}
+
+#profile_icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    background-color: rgb(124,126,131);
+    border-radius: 100%;
+}
+
+/* MAIN CONTENT */
+
+.upgrade {
+    height: 60px;
+    width: calc(100% - 260px);
+    background-color: rgb(8, 11, 18);
+    position: fixed;
+    top: 0;
+}
+
+
+.hor_navbar {
+    list-style-type: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 60px;
+}
+
+.hor_navbar li {
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.hor_navbar li a:hover {
+    color: white;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(173,255,47);
+}
+
+.flex_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    margin: 20px 0;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.song_img {
+    display: block;
+    width: 150px;
+}
+
+.song {
+    text-align: center;
+    max-width: 150px;
+    margin: 10px;
+}
+
+.font_twelve {
+    font-size: 12px;
+}
+
+.p_margin {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+/* VERTICAL NAVBAR HORIZONTAL MEDIA HANDLER */
+
+@media screen and (max-width: 600px) {
+
+    .upgrade {
+        width: calc(100% - 91px);
+    }
+
+    .xs_display_vertical {
+        display: none;
+    }
+
+    #profile_icon {
+        margin: 0;
+    }
+
+    .center_hor {
+        margin: 0 auto;
+    }
+
+    .main_navbar {
+        align-items: center;
+        width: 81px;
+    }
+
+    .main_content {
+        width: calc(100% - 81px);
+    }
+
+    .scale_icon {
+        height: 41px;
+        margin: 0;
+    }
+
+    #download {
+        border: none;
+    }
+
+    .logo_handler {
+        width: 41px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
