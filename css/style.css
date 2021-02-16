@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    min-width: 431px;
+    min-width: 431px; 
 }
 
 .wrapper {
@@ -35,15 +35,20 @@ body {
 }
 
 footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     min-width: 431px;
     width: 100%;
     height: 70px;
     background-color: rgb(40,40,40);
     position: absolute;
     bottom: 0;
+    z-index: 2;
+    padding: 0 10px;
 }
 
-/* SCROLLBAR GENTLY OFFERED BY W3SCHOOLS */
+/* SCROLLBAR CUSTOMIZATION NOT WORKING ON FIREFOX , ONLY ON WEBKIT BROWSERS */
 
 /* width */
 
@@ -53,17 +58,18 @@ footer {
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: rgb(29, 28, 28);
 }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: rgb(123,255,47);
+    border-radius: 5px;
 }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: rgb(173,255,47);
 }
 
 .general_ul {
@@ -160,13 +166,32 @@ footer {
 /* MAIN CONTENT */
 
 .upgrade {
+    text-align: right;
+    color: white;
     height: 60px;
     width: calc(100% - 260px);
     background-color: rgb(8, 11, 18);
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 
+.upgrade_text {
+    text-align: center;
+    margin-right: 20px;
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: calc(100% - 200px);
+    margin-top: 15px;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+.upgrade_text:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 .hor_navbar {
     list-style-type: none;
@@ -186,11 +211,13 @@ footer {
     color: white;
     padding-bottom: 5px;
     border-bottom: 1px solid rgb(173,255,47);
+    transition: .2s ease;
 }
 
 .flex_container {
+    margin: 0 10px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 h2 {
@@ -200,15 +227,19 @@ h2 {
     font-size: 28px;
 }
 
+h3 {
+    font-size: 12px;
+    word-wrap: break-word;
+}
+
 .song_img {
     display: block;
-    width: 150px;
+    width: 100%;
 }
 
 .song {
     text-align: center;
-    max-width: 150px;
-    margin: 10px;
+    width: calc(100% / 6.5);
 }
 
 .font_twelve {
@@ -224,7 +255,194 @@ h2 {
     border-radius: 50%;
 }
 
+.jhon , .artists {
+    margin-left: 0px;
+    justify-content: flex-start;
+}
+
+.jhon .song , .artists .song{
+    margin: 10px;
+}
+
+.layover {
+    background-color: black;
+    position: relative;
+}
+
+.player_hover {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+
+.layover:hover > .player_hover {
+    display: unset;
+}
+
+.layover > img:hover {
+    opacity: 0.2;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+#playing {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.playing_text {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.float_el {
+    float: left;
+}
+
+.playing_icons {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.playing_icons .far {
+    padding: 5px;
+}
+
+.second {
+    height: 50px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hover_line:hover {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.player_top {
+    min-width: 150px;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player_btm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigger_play {
+    font-size: 32px;
+}
+
+.bar_container {
+    margin: 0 auto;
+    height: 5px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgb(124,126,131);
+    margin: 0 10px;
+}
+
+.bar {
+    height: 100%;
+    width: 35%;
+    background-color: lightgray;
+    border-radius: 5px;
+    position: relative;
+}
+
+.third {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.third .fas {
+    padding: 5px;
+}
+
+.small_bar_container {
+    height: 5px;
+    width: 60px;
+    margin-left: 10px;
+    background-color: rgb(124,126,131);
+    border-radius: 5px;
+}
+
+.small_bar {
+    height: 100%;
+    width: 35%;
+    background-color: lightgray;
+    border-radius: 5px;
+    position: relative;
+}
+
+.white_hover:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.hover_cursor:hover {
+    cursor: pointer;
+}
+
+.scale:hover {
+    transform: scale(1.2);
+}
+
+.bar_container:hover , .small_bar_container {
+    cursor: pointer;
+}
+
+.bar_container:hover .show_progress , .small_bar_container:hover .show_progress {
+    background-color: rgb(173,255,47);
+}
+
+.round_play {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    right: -5px;
+    top: -2.5px;
+    background-color: white;
+    display: none;
+}
+
+.bar_container:hover .round_play , .small_bar_container:hover .round_play{
+    display: unset;
+}
+
 /* VERTICAL NAVBAR HORIZONTAL MEDIA HANDLER */
+
+@media screen and (max-width: 580px) {
+    .remove_player_el {
+        display: none;
+    }
+
+    footer {
+        justify-content: center;
+    }
+}
 
 @media screen and (max-width: 600px) {
 
@@ -232,7 +450,7 @@ h2 {
         width: calc(100% - 91px);
     }
 
-    .xs_display_vertical {
+    .xs_display_vertical , .remove_element_xs {
         display: none;
     }
 
@@ -253,6 +471,18 @@ h2 {
         width: calc(100% - 81px);
     }
 
+    .flex_container {
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+
+    .song {
+        text-align: center;
+        width: 45%;
+        margin: 10px;
+        /* max-width: 150px; */
+    }
+
     .scale_icon {
         height: 41px;
         margin: 0;
@@ -267,4 +497,37 @@ h2 {
         background-size: cover;
         background-repeat: no-repeat;
     }
+}
+
+@media screen and (min-width: 601px) and  (max-width: 750px) {
+    .remove_element_xs {
+        display: none;
+    } 
+
+    .flex_container {
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+
+    .song {
+        text-align: center;
+        width: 45%;
+        margin: 10px;
+        /* max-width: 150px; */
+    }
+}
+
+@media screen and (min-width: 751px) and  (max-width: 990px) {
+
+    .remove_element_md {
+        display: none;
+    }
+
+    .song {
+        text-align: center;
+        width: calc(100% / 4.5);
+        /* max-width: 150px; */
+        /* margin: 10px; */
+    }
+
 }

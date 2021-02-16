@@ -30,9 +30,10 @@
                             class="nav_icons scale_icon" src="img/libreria.svg" alt="library icon"><span
                             class="xs_display_vertical"> La Tua Libreria</span></a></li>
             </ul>
-            <ul class="playlist_btn larger_margin_top xs_display_vertical">
+            <ul class="general_ul playlist_btn larger_margin_top xs_display_vertical">
                 <li><a class="general_anchor white stronger" href="#">PLAYLIST</a></li>
-                <li class="margin_top_li"><a class="general_anchor hover_lightgrey grey" href="#"><i class="fas fa-plus plus_box"></i>
+                <li class="margin_top_li"><a class="general_anchor hover_lightgrey grey" href="#"><i
+                            class="fas fa-plus plus_box"></i>
                         Crea Playlist</a></li>
             </ul>
             <ul class="general_ul playlist larger_margin_top xs_display_vertical">
@@ -58,7 +59,9 @@
             </ul>
         </div>
         <div class="main_content">
-            <div class="upgrade"></div>
+            <div class="upgrade">
+                <div class="upgrade_text stronger font_twelve">EFFETTUA L' UPGRADE</div>
+            </div>
             <ul class=hor_navbar>
                 <li><a class="general_anchor grey" href="#"> IN EVIDENZA</a></li>
                 <li><a class="general_anchor grey" href="#"> PODCAST</a></li>
@@ -70,33 +73,51 @@
             <h2 class="white">Recently Played</h2>
             <div class="recently flex_container">
                 <div class="song margin_top_li">
-                    <img class="song_img" src="img/metal_lifting.jpg" alt="heavy metal">
+                    <div class="layover">
+                        <i class="far fa-play-circle player_hover"></i>
+                        <img class="song_img" src="img/metal_lifting.jpg" alt="heavy metal">
+                    </div>
                     <h3 class="white stronger margin_top_li">Heavy Metal</h3>
                     <p class="grey font_twelve margin_top_li">Subtitle</p>
                 </div>
                 <div class="song margin_top_li">
-                    <img class="song_img" src="img/stranger.jpeg" alt="stranger things">
+                    <div class="layover">
+                        <i class="far fa-play-circle player_hover"></i>
+                        <img class="song_img" src="img/stranger.jpeg" alt="stranger things">
+                    </div>
                     <h3 class="white stronger margin_top_li">Stranger Things, Vol. 1 (a Netflix Original Series
                         Soundtrack)</h3>
                     <p class="grey font_twelve margin_top_li">Kyle Dixon and Micheal Stein</p>
                 </div>
-                <div class="song margin_top_li">
-                    <img class="song_img" src="img/aquietplace.jpeg" alt="a quiet place">
+                <div class="song margin_top_li remove_element_xs">
+                    <div class="layover">
+                        <i class="far fa-play-circle player_hover"></i>
+                        <img class="song_img" src="img/aquietplace.jpeg" alt="a quiet place">
+                    </div>
                     <h3 class="white stronger margin_top_li">A quiet place</h3>
                     <p class="grey font_twelve margin_top_li">Subtitle</p>
                 </div>
-                <div class="song margin_top_li">
-                    <img class="song_img" src="img/split.jpeg" alt="split">
+                <div class="song margin_top_li remove_element_xs">
+                    <div class="layover">
+                        <i class="far fa-play-circle player_hover"></i>
+                        <img class="song_img" src="img/split.jpeg" alt="split">
+                    </div>
                     <h3 class="white stronger margin_top_li">Split</h3>
                     <p class="grey font_twelve margin_top_li">Subtitle</p>
                 </div>
-                <div class="song margin_top_li">
-                    <img class="song_img" src="img/cure.jpeg" alt="cure">
+                <div class="song margin_top_li remove_element_xs remove_element_md">
+                    <div class="layover">
+                        <i class="far fa-play-circle player_hover"></i>
+                        <img class="song_img" src="img/cure.jpeg" alt="cure">
+                    </div>
                     <h3 class="white stronger margin_top_li">A cure for wellness</h3>
                     <p class="grey font_twelve margin_top_li">Subtitle</p>
                 </div>
-                <div class="song margin_top_li">
-                    <img class="song_img" src="img/sinister.jpeg" alt="sinister">
+                <div class="song margin_top_li remove_element_xs remove_element_md">
+                    <div class="layover">
+                        <i class="far fa-play-circle player_hover"></i>
+                        <img class="song_img" src="img/sinister.jpeg" alt="sinister">
+                    </div>
                     <h3 class="white stronger margin_top_li">Sinister</h3>
                     <p class="grey font_twelve margin_top_li">Subtitle</p>
                 </div>
@@ -115,7 +136,7 @@
             </div>
             <h2 class="white">Artisti più popolari</h2>
             <p class="grey p_margin font_twelve margin_top_li">Più ascolti, più accurati saranno i suggerimenti.</p>
-            <div class="jhon flex_container">
+            <div class="artists flex_container">
                 <div class="song margin_top_li">
                     <img class="song_img circle" src="img/youg.jpeg" alt="Lana del Rey">
                     <h3 class="white stronger margin_top_li">Lana del Rey</h3>
@@ -127,7 +148,51 @@
             </div>
         </div>
     </div>
-    <footer></footer>
+    <footer>
+        <section class="first remove_player_el">
+            <img class="float_el" id="playing" src="img/sinister.jpeg" alt="sinister">
+            <div class="float_el playing_text">
+                <h3 class="white stronger">Sinister</h3>
+                <p class="grey stronger font_twelve hover_line">Brano Nome</p>
+            </div>
+            <div class="float_el playing_icons">
+                <i class="far fa-heart grey white_hover"></i>
+                <i class="far fa-folder grey white_hover"></i>
+            </div>
+        </section>
+        <section class="second">
+            <div class="player_top">
+                <i class="fas fa-random white hover_cursor"></i>
+                <i class="fas fa-step-backward white hover_cursor"></i>
+                <i class="far fa-play-circle white bigger_play hover_cursor scale"></i>
+                <i class="fas fa-step-forward white hover_cursor"></i>
+                <i class="fas fa-redo-alt white hover_cursor"></i>
+            </div>
+            <div class="player_btm">
+                <h3 class="white stronger">0:25</h3>
+                <div class="bar_container">
+                    <div class="bar show_progress">
+                        <span class="round_play"></span>
+                    </div>
+                </div>
+                <h3 class="white stronger">4:35</h3>
+            </div>
+        </section>
+        <section class="third remove_player_el">
+            <div>
+                <div">
+                    <i class="fas fa-list white"></i>
+                    <i class="fas fa-tv white"></i>
+                    <i class="fas fa-volume-up white"></i>
+            </div>
+            <div class="small_bar_container">
+                <div class="small_bar show_progress">
+                    <span class="round_play"></span>
+                </div>
+            </div>
+            </div>
+        </section>
+    </footer>
     </div>
 </body>
 
