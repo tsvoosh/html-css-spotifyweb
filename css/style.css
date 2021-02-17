@@ -31,7 +31,8 @@ body {
     width: calc(100% - 250px);
     background-color: rgb(20,25,34);
     height: calc(100% - 70px);
-    overflow-y: auto;
+    display: flex;
+    overflow-y: hidden;
 }
 
 footer {
@@ -169,11 +170,16 @@ footer {
     text-align: right;
     color: white;
     height: 60px;
-    width: calc(100% - 260px);
+    width: calc(100% - 250px);
     background-color: rgb(8, 11, 18);
     position: fixed;
     top: 0;
     z-index: 1;
+}
+
+.overflow_wrap {
+    overflow-y: auto;
+    margin-top: 60px;
 }
 
 .upgrade_text {
@@ -198,7 +204,6 @@ footer {
     text-align: center;
     font-size: 12px;
     font-weight: 500;
-    margin-top: 60px;
 }
 
 .hor_navbar li {
@@ -447,7 +452,7 @@ h3 {
 @media screen and (max-width: 600px) {
 
     .upgrade {
-        width: calc(100% - 91px);
+        width: calc(100% - 81px);
     }
 
     .xs_display_vertical , .remove_element_xs {
@@ -530,4 +535,10 @@ h3 {
         /* margin: 10px; */
     }
 
+}
+
+@media screen and (max-width: 80px) {
+    .remove_upgrade {
+        display: none;
+    }
 }
