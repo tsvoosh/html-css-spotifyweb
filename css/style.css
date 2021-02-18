@@ -183,11 +183,11 @@ footer {
 }
 
 .upgrade_text {
+    position: relative;
     text-align: center;
     margin-right: 20px;
     width: 180px;
     height: 30px;
-    line-height: 30px;
     margin-left: calc(100% - 200px);
     margin-top: 15px;
     border: 1px solid white;
@@ -197,6 +197,14 @@ footer {
 .upgrade_text:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+#upgrade {
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
 }
 
 .hor_navbar {
